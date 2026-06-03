@@ -1,0 +1,29 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment & secrets — NEVER commit these
+.env
+.env.local
+.env.production
+
+# Build output (if you add a build step later)
+/dist/
+/build/
+
+# Node (if you add tooling later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.bak
+*.swp

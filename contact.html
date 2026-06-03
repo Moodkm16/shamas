@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Private Enquiry — AURUM</title>
+  <meta name="description" content="Enquire about a specific AURUM piece or request a private viewing at our Cape Town atelier.">
+
+  <meta property="og:title" content="Private Enquiry — AURUM">
+  <meta property="og:description" content="Request a private viewing or enquire about a specific piece.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/contact.html">
+
+  <link rel="canonical" href="https://yourdomain.com/contact.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>⌚</text></svg>">
+</head>
+<body>
+
+  <!-- Skip to content link for keyboard accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- ─── Navigation ─────────────────────────────────────── -->
+  <header class="site-header scrolled" id="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="AURUM — go to homepage">
+        <span class="logo-text">AURUM</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links" role="list">
+          <li><a href="collection.html" class="nav-link">Collection</a></li>
+          <li><a href="collection.html#watches" class="nav-link">Watches</a></li>
+          <li><a href="collection.html#devices" class="nav-link">Devices</a></li>
+          <li><a href="collection.html#audio" class="nav-link">Audio</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link nav-link--cta">Enquire</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ─── Hero ──────────────────────────────────────────── -->
+    <section class="contact-hero" aria-labelledby="contact-heading">
+      <div class="container">
+        <p class="section-eyebrow">Get in Touch</p>
+        <h1 class="about-hero-title" id="contact-heading">Private Enquiry</h1>
+        <p class="about-hero-lead" style="font-size:var(--text-lg);">
+          We respond to every enquiry personally, within one business day.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── Contact grid ──────────────────────────────────── -->
+    <div class="contact-grid">
+      <div class="container" style="display:contents;">
+
+        <!-- Left: contact information -->
+        <div class="contact-info reveal" style="padding-inline:var(--space-6); padding-block:var(--space-8);">
+          <h2 class="contact-info-title">We would love<br>to hear from you.</h2>
+          <p class="contact-info-text">
+            Whether you are enquiring about a specific piece, requesting a private
+            viewing, or simply want to know more about AURUM — we are here.
+            No chatbots. No call centres. A real person in Cape Town.
+          </p>
+
+          <div class="contact-details">
+            <div>
+              <span class="contact-detail-label">Atelier</span>
+              <address class="contact-detail-value" style="font-style:normal; line-height:1.8;">
+                <span id="cfg-contact-addr1">V&amp;A Waterfront</span><br>
+                <span id="cfg-contact-addr2">Cape Town, 8001</span><br>
+                <span id="cfg-contact-country">South Africa</span>
+              </address>
+            </div>
+            <div>
+              <span class="contact-detail-label">Email</span>
+              <p class="contact-detail-value">
+                <a href="mailto:enquire@aurumworld.co.za" class="cfg-contact-email" style="color:var(--gold);">
+                  enquire@aurumworld.co.za
+                </a>
+              </p>
+            </div>
+            <div>
+              <span class="contact-detail-label">Hours</span>
+              <p class="contact-detail-value" style="line-height:1.8;">
+                Monday – Friday: <span id="cfg-contact-weekdays">09:00 – 17:00 SAST</span><br>
+                Saturday: <span id="cfg-contact-saturday">By appointment only</span><br>
+                Sunday &amp; public holidays: <span id="cfg-contact-sunday">Closed</span>
+              </p>
+            </div>
+            <div>
+              <span class="contact-detail-label">Response time</span>
+              <p class="contact-detail-value">Within one business day</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: enquiry form -->
+        <div class="contact-form-wrap reveal" style="padding-inline:var(--space-6); padding-block:var(--space-8); background:var(--surface); border-left:1px solid var(--border);">
+
+          <div id="enquiry-success" role="alert" aria-live="polite" hidden
+            style="text-align:center; padding:var(--space-16);">
+            <p style="font-family:var(--font-display); font-size:var(--text-2xl); margin-bottom:var(--space-4);">
+              Thank you.
+            </p>
+            <p style="color:var(--muted);">
+              Your enquiry has been received. We will respond personally within one business day.
+            </p>
+          </div>
+
+          <form class="enquiry-form" id="enquiry-form" novalidate aria-label="Private enquiry form">
+            <!-- Honeypot — bots fill this, humans don't see it -->
+            <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <!-- Name -->
+            <div class="field-group">
+              <label for="enquiry-name" class="field-label">
+                Full name <span aria-hidden="true" style="color:var(--gold);">*</span>
+              </label>
+              <input
+                type="text"
+                id="enquiry-name"
+                name="name"
+                class="form-input"
+                placeholder="Your full name"
+                autocomplete="name"
+                required
+                aria-required="true"
+                aria-describedby="name-error"
+              >
+              <span class="field-error" id="name-error" role="alert">Please enter your name.</span>
+            </div>
+
+            <!-- Email -->
+            <div class="field-group">
+              <label for="enquiry-email" class="field-label">
+                Email address <span aria-hidden="true" style="color:var(--gold);">*</span>
+              </label>
+              <input
+                type="email"
+                id="enquiry-email"
+                name="email"
+                class="form-input"
+                placeholder="your@email.com"
+                autocomplete="email"
+                inputmode="email"
+                required
+                aria-required="true"
+                aria-describedby="email-error"
+              >
+              <span class="field-error" id="email-error" role="alert">Please enter a valid email address.</span>
+            </div>
+
+            <!-- Phone (optional) -->
+            <div class="field-group">
+              <label for="enquiry-phone" class="field-label">Phone number (optional)</label>
+              <input
+                type="tel"
+                id="enquiry-phone"
+                name="phone"
+                class="form-input"
+                placeholder="+27 xx xxx xxxx"
+                autocomplete="tel"
+                inputmode="tel"
+              >
+            </div>
+
+            <!-- Interest -->
+            <div class="field-group">
+              <label for="enquiry-interest" class="field-label">
+                I am interested in <span aria-hidden="true" style="color:var(--gold);">*</span>
+              </label>
+              <select
+                id="enquiry-interest"
+                name="interest"
+                class="form-select"
+                required
+                aria-required="true"
+                aria-describedby="interest-error"
+              >
+                <option value="" disabled selected>Select a category</option>
+                <option value="timepieces">Timepieces</option>
+                <option value="devices">Devices</option>
+                <option value="audio">Audio</option>
+                <option value="bespoke">Bespoke / Custom order</option>
+                <option value="viewing">Private viewing at the atelier</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="field-error" id="interest-error" role="alert">Please select an option.</span>
+            </div>
+
+            <!-- Message -->
+            <div class="field-group">
+              <label for="enquiry-message" class="field-label">
+                Message <span aria-hidden="true" style="color:var(--gold);">*</span>
+              </label>
+              <textarea
+                id="enquiry-message"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Tell us what you are looking for, or ask any question…"
+                rows="5"
+                required
+                aria-required="true"
+                aria-describedby="message-error"
+              ></textarea>
+              <span class="field-error" id="message-error" role="alert">Please include a message.</span>
+            </div>
+
+            <!-- POPIA consent -->
+            <div class="field-group" style="flex-direction:row; align-items:flex-start; gap:var(--space-3);">
+              <input
+                type="checkbox"
+                id="enquiry-consent"
+                name="consent"
+                required
+                aria-required="true"
+                style="margin-top:3px; accent-color:var(--gold); width:16px; height:16px; flex-shrink:0; cursor:pointer;"
+              >
+              <label for="enquiry-consent" style="font-size:var(--text-xs); color:var(--muted); line-height:1.6; cursor:pointer;">
+                I consent to AURUM processing my personal information in order to respond
+                to this enquiry, in accordance with the
+                <a href="privacy.html" style="color:var(--gold); text-decoration:underline;">Privacy Policy</a>
+                and POPIA.
+                <span aria-hidden="true" style="color:var(--gold);"> *</span>
+              </label>
+            </div>
+
+            <div class="form-error" id="enquiry-error" role="alert" aria-live="polite" hidden>
+              Something went wrong. Please email us directly at
+              <a href="mailto:enquire@aurumworld.co.za" style="color:var(--gold);">enquire@aurumworld.co.za</a>.
+            </div>
+
+            <button type="submit" class="btn btn--gold" id="enquiry-submit" style="width:100%; justify-content:center;">
+              <span class="btn-text">Send Enquiry</span>
+              <span class="btn-loading" aria-hidden="true">Sending…</span>
+            </button>
+
+            <p style="font-size:var(--text-xs); color:var(--dim); margin-top:var(--space-3);">
+              Fields marked <span style="color:var(--gold);">*</span> are required.
+              We never share your information with third parties.
+            </p>
+          </form>
+
+        </div>
+
+      </div>
+    </div><!-- /contact-grid -->
+
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="AURUM homepage">AURUM</a>
+          <p class="footer-tagline">Precision &nbsp;·&nbsp; Rarity &nbsp;·&nbsp; Legacy</p>
+          <address class="footer-address">
+            <span id="cfg-footer-addr1">V&amp;A Waterfront</span><br>
+            <span id="cfg-footer-addr2">Cape Town, 8001</span><br>
+            <span id="cfg-footer-country">South Africa</span><br>
+            <a href="mailto:enquire@aurumworld.co.za" class="cfg-contact-email" style="color:var(--gold);">enquire@aurumworld.co.za</a>
+          </address>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-col">
+            <h3 class="footer-nav-heading">Collection</h3>
+            <ul role="list">
+              <li><a href="collection.html#watches">Timepieces</a></li>
+              <li><a href="collection.html#devices">Devices</a></li>
+              <li><a href="collection.html#audio">Audio</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h3 class="footer-nav-heading">Company</h3>
+            <ul role="list">
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h3 class="footer-nav-heading">Legal</h3>
+            <ul role="list">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="footer-year"></span> AURUM. All rights reserved.</p>
+        <p class="footer-locale">Cape Town, South Africa &nbsp;·&nbsp; Prices in ZAR</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

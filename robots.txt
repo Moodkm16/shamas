@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block admin or build folders if you add them later
+Disallow: /assets/private/
+
+Sitemap: https://yourdomain.com/sitemap.xml

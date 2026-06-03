@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AURUM — Luxury Timepieces &amp; Devices</title>
+  <meta name="description" content="AURUM crafts the world's most exclusive timepieces and premium devices. Precision engineering meets obsessive design. Est. 1990, Cape Town.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AURUM — Luxury Timepieces &amp; Devices">
+  <meta property="og:description" content="Where precision meets obsession. Est. 1990, Cape Town.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com">
+  <!-- Replace with a real 1200×630 image -->
+  <meta property="og:image" content="https://yourdomain.com/assets/images/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AURUM — Luxury Timepieces &amp; Devices">
+  <meta name="twitter:description" content="Where precision meets obsession.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yourdomain.com/">
+
+  <!-- Fonts — preconnect first for speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon (inline SVG — replace with real .ico / .png later) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>⌚</text></svg>">
+</head>
+<body>
+
+  <!-- Skip to content link for keyboard accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Custom cursor — hidden on touch devices via CSS -->
+  <div aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- ─── Navigation ─────────────────────────────────────── -->
+  <header class="site-header" id="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="AURUM — go to homepage">
+        <span class="logo-text">AURUM</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Open navigation menu"
+      >
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links" role="list">
+          <li><a href="collection.html" class="nav-link">Collection</a></li>
+          <li><a href="collection.html#watches" class="nav-link">Watches</a></li>
+          <li><a href="collection.html#devices" class="nav-link">Devices</a></li>
+          <li><a href="collection.html#audio" class="nav-link">Audio</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link nav-link--cta">Enquire</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ─── Hero ──────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true">
+        <!--
+          REPLACE WITH REAL IMAGE:
+          <picture>
+            <source srcset="assets/images/hero.webp" type="image/webp">
+            <img src="assets/images/hero.jpg" alt="" loading="eager" decoding="async"
+                 style="width:100%;height:100%;object-fit:cover;">
+          </picture>
+        -->
+        <div class="hero-gradient"></div>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <!-- 3D canvas — Three.js renders gold rings + orbs here -->
+      <canvas id="hero-3d" class="hero-3d-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow" id="cfg-hero-eyebrow">Est. 1990 &nbsp;·&nbsp; Cape Town, South Africa</p>
+        <h1 class="hero-title" id="hero-heading">
+          <span class="hero-title-line" id="cfg-hero-line1">Time.</span>
+          <span class="hero-title-line" id="cfg-hero-line2">Technology.</span>
+          <span class="hero-title-line hero-title-line--gold" id="cfg-hero-line3">Obsession.</span>
+        </h1>
+        <p class="hero-subtitle" id="cfg-hero-subtitle">
+          Handcrafted timepieces and precision devices<br>
+          for those who refuse to compromise.
+        </p>
+        <div class="hero-actions">
+          <a href="collection.html" class="btn btn--gold">Explore Collection</a>
+          <a href="about.html" class="btn btn--ghost">Our Story</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ─── Marquee ticker ────────────────────────────────── -->
+    <div class="marquee" aria-hidden="true" role="presentation">
+      <div class="marquee-track">
+        <span>AURUM</span><span class="marquee-dot">·</span>
+        <span>Luxury Timepieces</span><span class="marquee-dot">·</span>
+        <span>Premium Devices</span><span class="marquee-dot">·</span>
+        <span>Precision Audio</span><span class="marquee-dot">·</span>
+        <span>Est. 1990</span><span class="marquee-dot">·</span>
+        <span>Cape Town</span><span class="marquee-dot">·</span>
+        <span>Crafted Excellence</span><span class="marquee-dot">·</span>
+        <!-- Duplicate for seamless infinite scroll -->
+        <span>AURUM</span><span class="marquee-dot">·</span>
+        <span>Luxury Timepieces</span><span class="marquee-dot">·</span>
+        <span>Premium Devices</span><span class="marquee-dot">·</span>
+        <span>Precision Audio</span><span class="marquee-dot">·</span>
+        <span>Est. 1990</span><span class="marquee-dot">·</span>
+        <span>Cape Town</span><span class="marquee-dot">·</span>
+        <span>Crafted Excellence</span><span class="marquee-dot">·</span>
+      </div>
+    </div>
+
+    <!-- ─── Featured categories ───────────────────────────── -->
+    <section class="section categories" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Our World</p>
+          <h2 class="section-title" id="categories-heading">The Collection</h2>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card reveal--card">
+            <a href="collection.html#watches" class="category-card-link" aria-label="View Timepieces collection">
+              <div class="category-card-img">
+                <!--
+                  REPLACE WITH REAL IMAGE:
+                  <picture>
+                    <source srcset="assets/images/cat-watches.webp" type="image/webp">
+                    <img src="assets/images/cat-watches.jpg" alt="Luxury watches on display" loading="lazy" decoding="async">
+                  </picture>
+                -->
+                <div class="img-placeholder img-watches" role="img" aria-label="Luxury watch collection"></div>
+              </div>
+              <div class="category-card-body">
+                <div>
+                  <h3 class="category-card-title">Timepieces</h3>
+                  <p class="category-card-sub">34 models &nbsp;·&nbsp; From R&nbsp;48,000</p>
+                </div>
+                <span class="category-card-cta" aria-hidden="true">Discover →</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="category-card reveal--card">
+            <a href="collection.html#devices" class="category-card-link" aria-label="View Devices collection">
+              <div class="category-card-img">
+                <div class="img-placeholder img-devices" role="img" aria-label="Premium devices"></div>
+              </div>
+              <div class="category-card-body">
+                <div>
+                  <h3 class="category-card-title">Devices</h3>
+                  <p class="category-card-sub">12 models &nbsp;·&nbsp; From R&nbsp;22,000</p>
+                </div>
+                <span class="category-card-cta" aria-hidden="true">Discover →</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="category-card reveal--card">
+            <a href="collection.html#audio" class="category-card-link" aria-label="View Audio collection">
+              <div class="category-card-img">
+                <div class="img-placeholder img-audio" role="img" aria-label="Precision audio equipment"></div>
+              </div>
+              <div class="category-card-body">
+                <div>
+                  <h3 class="category-card-title">Audio</h3>
+                  <p class="category-card-sub">8 models &nbsp;·&nbsp; From R&nbsp;12,000</p>
+                </div>
+                <span class="category-card-cta" aria-hidden="true">Discover →</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Brand manifesto ───────────────────────────────── -->
+    <section class="manifesto" aria-label="Brand manifesto">
+      <div class="container">
+        <blockquote class="manifesto-quote reveal">
+          <p>"We do not make products.<br>We craft obsessions."</p>
+          <footer class="manifesto-footer">
+            <cite>— AURUM Founding Principle, 1990</cite>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ─── Craft showcase — beige + 3D watch ──────────────── -->
+    <section class="craft-section" id="craft-section" aria-label="Craftsmanship showcase">
+      <div class="container">
+        <div class="craft-grid">
+
+          <div class="craft-text reveal--left">
+            <p class="section-eyebrow">The Craft</p>
+            <h2 class="craft-heading">Every detail,<br><em>obsessed over.</em></h2>
+            <p class="craft-desc">
+              From the weight of the case to the geometry of the hands,
+              nothing leaves our atelier until it is beyond reproach.
+              Tolerances measured in microns. Finishes approved by eye.
+            </p>
+            <a href="about.html" class="btn btn--outline-gold" style="margin-top:var(--space-8)">Discover the Process</a>
+          </div>
+
+          <div class="watch-stage" aria-hidden="true">
+            <div class="watch-3d" id="js-watch-3d">
+              <div class="w-strap w-strap--top"></div>
+              <div class="w-case-wrap">
+                <div class="w-case">
+                  <div class="w-bezel">
+                    <div class="w-dial">
+                      <div class="w-indices">
+                        <span class="w-idx w-idx--major" style="--a:0deg"></span>
+                        <span class="w-idx" style="--a:30deg"></span>
+                        <span class="w-idx" style="--a:60deg"></span>
+                        <span class="w-idx w-idx--major" style="--a:90deg"></span>
+                        <span class="w-idx" style="--a:120deg"></span>
+                        <span class="w-idx" style="--a:150deg"></span>
+                        <span class="w-idx w-idx--major" style="--a:180deg"></span>
+                        <span class="w-idx" style="--a:210deg"></span>
+                        <span class="w-idx" style="--a:240deg"></span>
+                        <span class="w-idx w-idx--major" style="--a:270deg"></span>
+                        <span class="w-idx" style="--a:300deg"></span>
+                        <span class="w-idx" style="--a:330deg"></span>
+                      </div>
+                      <span class="w-logo">SHAMAS</span>
+                      <div class="w-hand w-hand--hour" id="js-w-hour"></div>
+                      <div class="w-hand w-hand--minute" id="js-w-minute"></div>
+                      <div class="w-pivot"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-crown"></div>
+              </div>
+              <div class="w-strap w-strap--bottom"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── New arrival spotlight ─────────────────────────── -->
+    <section class="section spotlight" aria-labelledby="spotlight-heading">
+      <div class="container container--wide">
+        <!-- JS renders this from config.js → spotlight + products -->
+        <div class="spotlight-inner" id="cfg-spotlight-inner"></div>
+      </div>
+    </section>
+
+    <!-- ─── Stats ──────────────────────────────────────────── -->
+    <section class="stats" aria-label="Brand heritage statistics">
+      <div class="container">
+        <!-- JS renders from config.js → stats array -->
+        <ul class="stats-grid" role="list" id="cfg-stats"></ul>
+      </div>
+    </section>
+
+    <!-- ─── Brand pillars ─────────────────────────────────── -->
+    <section class="section pillars" aria-labelledby="pillars-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Our Promise</p>
+          <h2 class="section-title" id="pillars-heading">Crafted to Perfection</h2>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar reveal--card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                <line x1="20" y1="7"  x2="20" y2="13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="20" y1="27" x2="20" y2="33" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="7"  y1="20" x2="13" y2="20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="27" y1="20" x2="33" y2="20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="20" y1="20" x2="26" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Precision</h3>
+            <p class="pillar-desc">Every component engineered to tolerances measured in microns. We accept nothing less than mechanical perfection in every piece we release.</p>
+          </article>
+
+          <article class="pillar reveal--card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="20,3 24,14 36,14 27,22 30,34 20,27 10,34 13,22 4,14 16,14" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Rarity</h3>
+            <p class="pillar-desc">Limited runs. Numbered editions. The value of an AURUM piece lies not only in its craft, but in the deliberate scarcity we maintain.</p>
+          </article>
+
+          <article class="pillar reveal--card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 5 C20 5 7 13 7 23 C7 30.18 12.82 36 20 36 C27.18 36 33 30.18 33 23 C33 13 20 5 20 5Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                <path d="M20 15 L20 27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M14 21 L26 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Legacy</h3>
+            <p class="pillar-desc">Each piece is designed to outlast its owner — built to be passed down as an enduring statement of taste and discernment across generations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Newsletter ─────────────────────────────────────── -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-inner reveal">
+          <div class="newsletter-text">
+            <h2 class="newsletter-title" id="newsletter-heading">Private Access</h2>
+            <p class="newsletter-desc">
+              Be the first to know about new releases and private viewing events.
+              We send fewer than four communications per year.
+            </p>
+          </div>
+
+          <div class="newsletter-form-wrap">
+            <form class="newsletter-form" id="newsletter-form" novalidate>
+              <!-- Honeypot — hide from humans, visible to bots -->
+              <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <div class="form-group">
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input
+                  type="email"
+                  id="newsletter-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Your email address"
+                  autocomplete="email"
+                  inputmode="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="newsletter-error"
+                >
+                <button type="submit" class="btn btn--gold" id="newsletter-submit">
+                  <span class="btn-text">Join</span>
+                  <span class="btn-loading" aria-hidden="true">…</span>
+                </button>
+              </div>
+
+              <p class="newsletter-privacy">
+                No spam. We respect POPIA.
+                <a href="privacy.html">Privacy policy</a>.
+              </p>
+
+              <div class="form-success" id="newsletter-success" role="alert" aria-live="polite" hidden>
+                Thank you. You will be among the first to know.
+              </div>
+              <div class="form-error" id="newsletter-error" role="alert" aria-live="polite" hidden>
+                Please enter a valid email address.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="AURUM homepage">AURUM</a>
+          <p class="footer-tagline">Precision &nbsp;·&nbsp; Rarity &nbsp;·&nbsp; Legacy</p>
+          <address class="footer-address">
+            <span id="cfg-footer-addr1">V&amp;A Waterfront</span><br>
+            <span id="cfg-footer-addr2">Cape Town, 8001</span><br>
+            <span id="cfg-footer-country">South Africa</span><br>
+            <a href="mailto:enquire@aurumworld.co.za" class="cfg-contact-email" style="color:var(--gold);">enquire@aurumworld.co.za</a>
+          </address>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-col">
+            <h3 class="footer-nav-heading">Collection</h3>
+            <ul role="list">
+              <li><a href="collection.html#watches">Timepieces</a></li>
+              <li><a href="collection.html#devices">Devices</a></li>
+              <li><a href="collection.html#audio">Audio</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h3 class="footer-nav-heading">Company</h3>
+            <ul role="list">
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.html">Private Enquiry</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h3 class="footer-nav-heading">Legal</h3>
+            <ul role="list">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footer-year"></span> AURUM. All rights reserved.
+        </p>
+        <p class="footer-locale">
+          Cape Town, South Africa &nbsp;·&nbsp; Prices in ZAR &nbsp;·&nbsp; Subject to change without notice
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="js/main.js" defer></script>
+  <!-- Three.js for 3D hero -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="js/three-hero.js" defer></script>
+</body>
+</html>
