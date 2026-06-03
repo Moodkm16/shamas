@@ -143,10 +143,6 @@ body.dark-mode {
 
 /* ─── Theme Toggle Button ─────────────────────────────────── */
 .theme-toggle {
-  position: absolute;
-  right: var(--space-8);
-  top: 50%;
-  transform: translateY(-50%);
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 50%;
@@ -158,6 +154,7 @@ body.dark-mode {
   cursor: pointer;
   transition: all var(--t-base);
   color: var(--white);
+  margin-left: var(--space-4);
 }
 
 .theme-toggle:hover {
