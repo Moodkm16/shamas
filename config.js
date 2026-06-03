@@ -146,25 +146,25 @@ const CONFIG = {
   ],
 
   /* ── Theme ───────────────────────────────────────────────
-     DARK CINEMATIC — dark background with gold accents.
-     Change hex values to restyle the entire site.
+     LIGHT MODE — cream background with gold accents.
+     Dark mode is handled via CSS toggle.
   ──────────────────────────────────────────────────────── */
   theme: {
-    /* Backgrounds — dark cinematic */
-    background:  "#080808",   // main page background
-    surface:     "#0e0e0e",   // cards, nav, sections
-    surface2:    "#161616",   // inputs, deeper cards
-    surface3:    "#1f1f1f",   // 404 number, borders
+    /* Backgrounds — cream */
+    background:  "#FAF8F4",   // main page background
+    surface:     "#F2EDE5",   // cards, nav, sections
+    surface2:    "#EAE3D9",   // inputs, deeper cards
+    surface3:    "#DFD7CB",   // 404 number, borders
 
-    /* Accent — gold that pops on dark */
-    gold:        "#c9a45a",
-    goldLight:   "#dfc07a",
-    goldDark:    "#8c6e30",
+    /* Accent — gold that pops on cream */
+    gold:        "#B8912A",
+    goldLight:   "#D4A840",
+    goldDark:    "#8A6A18",
 
-    /* Text — light on dark background */
-    white:       "#f0ebe0",   // primary text (cream)
-    muted:       "#8a8275",   // secondary text
-    dim:         "#504840",   // tertiary / disabled
+    /* Text — dark on light background */
+    white:       "#1C1810",   // primary text (dark charcoal)
+    muted:       "#6B5E50",   // secondary text
+    dim:         "#A0907E",   // tertiary / disabled
 
     headlineFont: "'Cormorant Garamond', Georgia, serif",
     bodyFont:     "'Inter', -apple-system, sans-serif",

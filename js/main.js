@@ -475,10 +475,38 @@
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ─── 11. Page fade-in ──────────────────────────────────── */
+  /* ─── 11. Theme toggle ──────────────────────────────────── */
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = themeToggle?.querySelector('.theme-toggle-icon');
+
+  // Check for saved theme preference or system preference
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    document.body.classList.add('dark-mode');
+    if (themeIcon) themeIcon.textContent = '◑';
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+
+      // Update icon
+      if (themeIcon) {
+        themeIcon.textContent = isDark ? '◑' : '◐';
+      }
+
+      // Save preference
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  }
+
+  /* ─── 12. Page fade-in ──────────────────────────────────── */
   document.body.classList.add('page-fade');
 
-  /* ─── 12. 3D watch rotation on scroll ──────────────────── */
+  /* ─── 13. 3D watch rotation on scroll ──────────────────── */
   (function initWatchRotation() {
     const watch   = document.getElementById('js-watch-3d');
     const section = document.getElementById('craft-section');
